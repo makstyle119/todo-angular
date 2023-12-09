@@ -11,10 +11,13 @@ import { TodoItem } from '../shared/models/todoItem';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  items = [
+  items: TodoItem[] = [
     new TodoItem('To Learn Angular'),
     new TodoItem('Get Coffee', true),
     new TodoItem('wakeUp early 🥴'),
   ];
   title = 'todo-angular';
+  toggleItem(item: TodoItem) {
+    item.isCompleted = !item.isCompleted;
+  }
 }

@@ -13,9 +13,15 @@
 - to display our items we use loop and in angular we use `*` to use use or other conditions. and add bootstrap as our styling library.
 - loop syntax look like this _**`<div *ngFor="let item of array"></div>`**_.
 
-## [4 commit: binding data to properties and attributes]()
+## [4 commit: binding data to properties and attributes](https://github.com/makstyle119/todo-angular/tree/fe20401b959899df230273e82c6fe2a5f1ee1071)
 
 - bind attribute to a variable is pretty easy. you just have to warp the attribute inside the large bracket `[id]` and then the value is the variable `[id]="ii"`.
 - if you want to do it with a custom attribute you can do this with attribute start with `attr.`
 
   eg: _**`<div [attr.data-index]="ii"></div>`**_
+
+## [5 commit: binding events]()
+
+- bind event is easy in angular all you have to do is to wrap the event eg: ( click, blue ) with round brackets _**`(click)`**_. and js functions or the statement as value.
+
+  eg: _**`<input (click)="func()" />`**_
