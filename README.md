@@ -26,7 +26,7 @@
 
   eg: _**`<input (click)="func()" />`**_
 
-## [6 commit: using ngModel to bind values to form controls]()
+## [6 commit: using ngModel to bind values to form controls](https://github.com/makstyle119/todo-angular/tree/e60129c1cb0234cb6a94633596e390ec52a58948)
 
 - so first you have to create a variable in component file and don't forget to import _**`formModule`**_. and add an attribute into input like this:
 
@@ -34,8 +34,12 @@
 
 - \*it's not mandatory to have field and variable same name
 
-## [7 commit: listing for changes to ngModel values]()
+## [7 commit: listing for changes to ngModel values](https://github.com/makstyle119/todo-angular/tree/0c558c8dd135393ed4a1cee0935c675b0f856b3b)
 
 - _**`ngModelChange`**_ is use to get the updated value from a input:
 
   eg: _**`<select name="fieldName" [(ngModelChange)]="func($event)" />`**_
+
+## [7 commit: using Getting to filter and provide data]()
+
+- we don't do much here just use js getter function to update _**`visibleItem`**_ array

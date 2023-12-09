@@ -22,11 +22,7 @@
 
   <div class="row mt-3">
     <div class="col-sm-2">
-      <select
-        class="form-select"
-        [(ngModel)]="filter"
-        (ngModelChange)="updateList($event)"
-      >
+      <select class="form-select" [(ngModel)]="filter">
         <option value="0">All</option>
         <option value="1">Pending</option>
         <option value="2">Completed</option>

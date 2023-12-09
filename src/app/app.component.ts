@@ -4,6 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { TodoItem } from '../shared/models/todoItem';
 import { FormsModule } from '@angular/forms';
 
+const Filters = [
+  (item: TodoItem) => item,
+  (item: TodoItem) => !item.isCompleted,
+  (item: TodoItem) => item.isCompleted,
+];
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -22,7 +28,17 @@ export class AppComponent {
   newTodoItem: string = '';
   filter: '0' | '1' | '2' = '0';
 
-  visibleItem: TodoItem[] = this.items;
+  get visibleItem(): TodoItem[] {
+    return this.items.filter(Filters[this.filter]);
+    // let value = this.filter;
+    // if (value == '0') {
+    //   return this.items;
+    // } else if (value == '1') {
+    //   return this.items.filter((item) => !item.isCompleted);
+    // } else {
+    //   return this.items.filter((item) => item.isCompleted);
+    // }
+  }
 
   toggleItem(item: TodoItem) {
     item.isCompleted = !item.isCompleted;
@@ -31,15 +47,5 @@ export class AppComponent {
   addItem() {
     this.items.push(new TodoItem(this.newTodoItem));
     this.newTodoItem = '';
-  }
-
-  updateList(value: '0' | '1' | '2') {
-    if (value == '0') {
-      this.visibleItem = this.items;
-    } else if (value == '1') {
-      this.visibleItem = this.items.filter((item) => !item.isCompleted);
-    } else {
-      this.visibleItem = this.items.filter((item) => item.isCompleted);
-    }
   }
 }
