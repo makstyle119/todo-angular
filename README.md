@@ -33,3 +33,9 @@
   eg: _**`<input name="fieldName" [(ngModel)]="variableNameThatYouDeclareInComponentFile" />`**_
 
 - \*it's not mandatory to have field and variable same name
+
+## [7 commit: listing for changes to ngModel values]()
+
+- _**`ngModelChange`**_ is use to get the updated value from a input:
+
+  eg: _**`<select name="fieldName" [(ngModelChange)]="func($event)" />`**_

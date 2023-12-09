@@ -13,12 +13,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   items: TodoItem[] = [
-    // new TodoItem('To Learn Angular'),
-    // new TodoItem('Get Coffee', true),
-    // new TodoItem('wakeUp early 🥴'),
+    new TodoItem('To Learn Angular'),
+    new TodoItem('Get Coffee', true),
+    new TodoItem('wakeUp early 🥴'),
   ];
+
   title = 'todo-angular';
-  newTodoItem = '';
+  newTodoItem: string = '';
+  filter: '0' | '1' | '2' = '0';
+
+  visibleItem: TodoItem[] = this.items;
+
   toggleItem(item: TodoItem) {
     item.isCompleted = !item.isCompleted;
   }
@@ -26,5 +31,15 @@ export class AppComponent {
   addItem() {
     this.items.push(new TodoItem(this.newTodoItem));
     this.newTodoItem = '';
+  }
+
+  updateList(value: '0' | '1' | '2') {
+    if (value == '0') {
+      this.visibleItem = this.items;
+    } else if (value == '1') {
+      this.visibleItem = this.items.filter((item) => !item.isCompleted);
+    } else {
+      this.visibleItem = this.items.filter((item) => item.isCompleted);
+    }
   }
 }
