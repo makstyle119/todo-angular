@@ -20,8 +20,16 @@
 
   eg: _**`<div [attr.data-index]="ii"></div>`**_
 
-## [5 commit: binding events]()
+## [5 commit: binding events](https://github.com/makstyle119/todo-angular/tree/f962a13f9479f8e57e6e92968500664f387555f5)
 
 - bind event is easy in angular all you have to do is to wrap the event eg: ( click, blue ) with round brackets _**`(click)`**_. and js functions or the statement as value.
 
   eg: _**`<input (click)="func()" />`**_
+
+## [6 commit: using ngModel to bind values to form controls]()
+
+- so first you have to create a variable in component file and don't forget to import _**`formModule`**_. and add an attribute into input like this:
+
+  eg: _**`<input name="fieldName" [(ngModel)]="variableNameThatYouDeclareInComponentFile" />`**_
+
+- \*it's not mandatory to have field and variable same name
