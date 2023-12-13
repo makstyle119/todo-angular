@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TodoItem } from '../shared/models/todoItem';
 import { FormsModule } from '@angular/forms';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 const Filters = [
   (item: TodoItem) => item,
@@ -13,9 +14,9 @@ const Filters = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  imports: [CommonModule, RouterOutlet, FormsModule, TodoListComponent],
 })
 export class AppComponent {
   items: TodoItem[] = [
@@ -38,10 +39,6 @@ export class AppComponent {
     // } else {
     //   return this.items.filter((item) => item.isCompleted);
     // }
-  }
-
-  toggleItem(item: TodoItem) {
-    item.isCompleted = !item.isCompleted;
   }
 
   addItem() {

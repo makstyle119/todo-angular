@@ -40,6 +40,10 @@
 
   eg: _**`<select name="fieldName" [(ngModelChange)]="func($event)" />`**_
 
-## [7 commit: using Getting to filter and provide data]()
+## [8 commit: using Getting to filter and provide data](https://github.com/makstyle119/todo-angular/tree/b94bfcd9e645d884412b4d66cd94f4012cafd502)
 
 - we don't do much here just use js getter function to update _**`visibleItem`**_ array
+
+## [9 commit: creating custom component]()
+
+- we just break component into a child component, the important thing is here that we use input decorator for input in function ( just like props in js ) and component name is define in component file

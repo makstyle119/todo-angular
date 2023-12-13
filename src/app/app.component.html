@@ -31,13 +31,14 @@
   </div>
 
   <div class="row mt-3">
-    <div *ngIf="visibleItem.length === 0; else showItems">
+    <todo-list [items]="visibleItem"></todo-list>
+    <!-- <div *ngIf="items.length === 0; else showItems">
       There are no wishes to display.
-    </div>
+    </div> -->
 
-    <ng-template #showItems>
+    <!-- <ng-template #showItems>
       <ul class="wish-list">
-        <li *ngFor="let item of visibleItem; index as ii">
+        <li *ngFor="let item of items; index as ii">
           <div class="form-check">
             <label class="form-check-label">
               <input
@@ -52,6 +53,6 @@
           </div>
         </li>
       </ul>
-    </ng-template>
+    </ng-template> -->
   </div>
 </div>
