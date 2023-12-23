@@ -52,6 +52,10 @@
 
 - we break our form component into another component and the new thing we know in this step is output and EventEmitter attribute ( output is use to output a value, and EventEmitter is use with output to handle event on a instance)
 
-## [11 commit: outputting information from a component]()
+## [11 commit: initialize component functionality](https://github.com/makstyle119/todo-angular/tree/94884a9d9daad0c5a8f4c0f2e2eb2bb37dbbac4d)
 
-- we break our form component into another component and the new thing we know in this step is output and EventEmitter attribute ( output is use to output a value, and EventEmitter is use with output to handle event on a instance)
+- in this step we do the same thing and move filter into child component. ( nothing special to mention here ).
+
+## [12 commit: setting up two-way binding]()
+
+- in this section we learn two way binding and a important thing is that if our input and output value is same we will add change in the last to make it identified for angular. ( eg: _**`item`**_ => _**`itemChange`**_ )

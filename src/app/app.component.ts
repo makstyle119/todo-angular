@@ -38,20 +38,21 @@ export class AppComponent {
   // newTodoItem: string = '';
   // filter: '0' | '1' | '2' = '0';
 
-  filter = () => {};
+  // filter = () => {};
+  filter: any;
 
-  get visibleItem(): TodoItem[] {
-    return this.items.filter(this.filter);
-    // return this.items.filter(Filters[this.filter]);
-    // let value = this.filter;
-    // if (value == '0') {
-    //   return this.items;
-    // } else if (value == '1') {
-    //   return this.items.filter((item) => !item.isCompleted);
-    // } else {
-    //   return this.items.filter((item) => item.isCompleted);
-    // }
-  }
+  // get visibleItem(): TodoItem[] {
+  //   return this.items.filter(this.filter);
+  //   // return this.items.filter(Filters[this.filter]);
+  //   // let value = this.filter;
+  //   // if (value == '0') {
+  //   //   return this.items;
+  //   // } else if (value == '1') {
+  //   //   return this.items.filter((item) => !item.isCompleted);
+  //   // } else {
+  //   //   return this.items.filter((item) => item.isCompleted);
+  //   // }
+  // }
 
   // addItem() {
   //   this.items.push(new TodoItem(this.newTodoItem));

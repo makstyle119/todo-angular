@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { TodoItem } from '../../shared/models/todoItem';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,14 +24,21 @@ const Filters = [
   styleUrl: './todo-filter.component.css',
 })
 export class TodoFilterComponent implements OnInit {
-  @Output() filter = new EventEmitter<any>();
+  constructor(private cd: ChangeDetectorRef) {}
+
+  @Input() filter: any;
+  @Output() filterChange = new EventEmitter<any>();
 
   ngOnInit(): void {
-    this.filter.emit(Filters[0]);
+    this.updateFilter('0');
   }
   listFilter: '0' | '1' | '2' = '0';
 
-  changeFilter(value: any) {
-    this.filter.emit(Filters[value]);
+  // changeFilter(value: any) {
+  //   this.filter.emit(Filters[value]);
+  // }
+  updateFilter(value: any) {
+    this.filter = Filters[value];
+    this.filterChange.emit(this.filter);
   }
 }
