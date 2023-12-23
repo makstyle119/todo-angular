@@ -44,6 +44,10 @@
 
 - we don't do much here just use js getter function to update _**`visibleItem`**_ array
 
-## [9 commit: creating custom component]()
+## [9 commit: creating custom component](https://github.com/makstyle119/todo-angular/tree/6ee7149b961b6b400322c2ad6b61220099dcb261)
 
 - we just break component into a child component, the important thing is here that we use input decorator for input in function ( just like props in js ) and component name is define in component file
+
+## [9 commit: outputting information from a component]()
+
+- we break our form component into another component and the new thing we know in this step is output and EventEmitter attribute ( output is use to output a value, and EventEmitter is use with output to handle event on a instance)

@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { TodoItem } from '../shared/models/todoItem';
 import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
 
 const Filters = [
   (item: TodoItem) => item,
@@ -16,7 +17,13 @@ const Filters = [
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [CommonModule, RouterOutlet, FormsModule, TodoListComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    FormsModule,
+    TodoListComponent,
+    AddTodoFormComponent,
+  ],
 })
 export class AppComponent {
   items: TodoItem[] = [
@@ -26,7 +33,7 @@ export class AppComponent {
   ];
 
   title = 'todo-angular';
-  newTodoItem: string = '';
+  // newTodoItem: string = '';
   filter: '0' | '1' | '2' = '0';
 
   get visibleItem(): TodoItem[] {
@@ -41,8 +48,8 @@ export class AppComponent {
     // }
   }
 
-  addItem() {
-    this.items.push(new TodoItem(this.newTodoItem));
-    this.newTodoItem = '';
-  }
+  // addItem() {
+  //   this.items.push(new TodoItem(this.newTodoItem));
+  //   this.newTodoItem = '';
+  // }
 }

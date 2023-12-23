@@ -1,5 +1,6 @@
 <div class="container">
-  <form class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
+  <add-todo-form (addWish)="items.push($event)"></add-todo-form>
+  <!-- <form class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
     <div class="col-sm-6">
       <label class="visually-hidden" for="specificSizeInputName">Wish</label>
       <input
@@ -18,7 +19,7 @@
         Add Wish
       </button>
     </div>
-  </form>
+  </form> -->
 
   <div class="row mt-3">
     <div class="col-sm-2">
