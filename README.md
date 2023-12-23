@@ -48,6 +48,10 @@
 
 - we just break component into a child component, the important thing is here that we use input decorator for input in function ( just like props in js ) and component name is define in component file
 
-## [9 commit: outputting information from a component]()
+## [10 commit: outputting information from a component](https://github.com/makstyle119/todo-angular/tree/54dad9fbcdecf63b9af3c8eae7ae98305bb0a746)
+
+- we break our form component into another component and the new thing we know in this step is output and EventEmitter attribute ( output is use to output a value, and EventEmitter is use with output to handle event on a instance)
+
+## [11 commit: outputting information from a component]()
 
 - we break our form component into another component and the new thing we know in this step is output and EventEmitter attribute ( output is use to output a value, and EventEmitter is use with output to handle event on a instance)

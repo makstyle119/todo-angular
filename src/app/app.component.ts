@@ -5,12 +5,13 @@ import { TodoItem } from '../shared/models/todoItem';
 import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
+import { TodoFilterComponent } from './todo-filter/todo-filter.component';
 
-const Filters = [
-  (item: TodoItem) => item,
-  (item: TodoItem) => !item.isCompleted,
-  (item: TodoItem) => item.isCompleted,
-];
+// const Filters = [
+//   (item: TodoItem) => item,
+//   (item: TodoItem) => !item.isCompleted,
+//   (item: TodoItem) => item.isCompleted,
+// ];
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ const Filters = [
     FormsModule,
     TodoListComponent,
     AddTodoFormComponent,
+    TodoFilterComponent,
   ],
 })
 export class AppComponent {
@@ -32,12 +34,15 @@ export class AppComponent {
     new TodoItem('wakeUp early 🥴'),
   ];
 
-  title = 'todo-angular';
+  // title = 'todo-angular';
   // newTodoItem: string = '';
-  filter: '0' | '1' | '2' = '0';
+  // filter: '0' | '1' | '2' = '0';
+
+  filter = () => {};
 
   get visibleItem(): TodoItem[] {
-    return this.items.filter(Filters[this.filter]);
+    return this.items.filter(this.filter);
+    // return this.items.filter(Filters[this.filter]);
     // let value = this.filter;
     // if (value == '0') {
     //   return this.items;
