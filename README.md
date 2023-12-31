@@ -60,6 +60,10 @@
 
 - in this section we learn two way binding and a important thing is that if our input and output value is same we will add change in the last to make it identified for angular. ( eg: _**`item`**_ => _**`itemChange`**_ )
 
-## [13 commit: practice up two-way binding]()
+## [13 commit: practice up two-way binding](https://github.com/makstyle119/todo-angular/tree/f59a9422d59d6f7690f2f935a8d72f0f813a10bf)
 
 - nothing much just do same as last commit and break list component into child component.
+
+## [14 commit: styling component]()
+
+- we use _**`ngClass`**_ to do conditional rendering and we can provide it's value as _**`string`**_, _**`array`**_, or _**`object`**_

@@ -14,6 +14,13 @@ export class TodoListItemComponent {
   @Input() fulfilled!: boolean;
   @Output() fulfilledChange = new EventEmitter<boolean>();
 
+  get cssClasses() {
+    // return this.fulfilled ? ['strikeout', 'text-muted'] : [];
+    return {
+      'strikeout text-muted': this.fulfilled,
+    };
+  }
+
   constructor() {}
 
   ngOnInit() {}
