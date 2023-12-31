@@ -4,7 +4,13 @@
 
 <ng-template #showItems>
   <ul class="wish-list">
-    <li *ngFor="let item of items; index as ii">
+    <todo-list-item
+      *ngFor="let item of items"
+      [name]="item.name"
+      [(fulfilled)]="item.isCompleted"
+    ></todo-list-item>
+
+    <!-- <li *ngFor="let item of items; index as ii">
       <div class="form-check">
         <label class="form-check-label">
           <input
@@ -17,6 +23,6 @@
           {{ item.name }}
         </label>
       </div>
-    </li>
+    </li> -->
   </ul>
 </ng-template>

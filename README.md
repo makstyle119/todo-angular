@@ -56,6 +56,10 @@
 
 - in this step we do the same thing and move filter into child component. ( nothing special to mention here ).
 
-## [12 commit: setting up two-way binding]()
+## [12 commit: setting up two-way binding](https://github.com/makstyle119/todo-angular/tree/2f86a33370b0dfd11f527734d9269c11a187c746)
 
 - in this section we learn two way binding and a important thing is that if our input and output value is same we will add change in the last to make it identified for angular. ( eg: _**`item`**_ => _**`itemChange`**_ )
+
+## [13 commit: practice up two-way binding]()
+
+- nothing much just do same as last commit and break list component into child component.
