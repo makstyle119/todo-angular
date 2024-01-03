@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import events from '../../shared/services/EventService';
+import { EventService } from '../../shared/services/EventService';
 import { TodoItem } from '../../shared/models/todoItem';
 
 @Component({
@@ -22,7 +22,7 @@ export class TodoListItemComponent {
     };
   }
 
-  constructor() {}
+  constructor(private events: EventService) {}
 
   ngOnInit() {}
 
@@ -33,6 +33,6 @@ export class TodoListItemComponent {
   }
 
   removeItem() {
-    events.emit('removeItem', this.item);
+    this.events.emit('removeItem', this.item);
   }
 }

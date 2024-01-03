@@ -6,8 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
 import { TodoFilterComponent } from './todo-filter/todo-filter.component';
-import events from '../shared/services/EventService';
-// import EventService from '../shared/services/EventService';
+import { EventService } from '../shared/services/EventService';
 
 // const Filters = [
 //   (item: TodoItem) => item,
@@ -28,6 +27,7 @@ import events from '../shared/services/EventService';
     AddTodoFormComponent,
     TodoFilterComponent,
   ],
+  providers: [EventService],
 })
 export class AppComponent {
   items: TodoItem[] = [
@@ -36,8 +36,8 @@ export class AppComponent {
     new TodoItem('wakeUp early 🥴'),
   ];
 
-  constructor() {
-    events.listen('removeItem', (item) => {
+  constructor(events: EventService) {
+    events.listen('removeItem', (item: TodoItem) => {
       // remove item
       let index = this.items.indexOf(item);
       this.items.splice(index, 1);

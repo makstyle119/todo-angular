@@ -72,6 +72,10 @@
 
 - so we learn how to make event bus ( how it's work ? it's simple you create a f event somewhere and then emit it from anywhere just like redux for events ).
 
-## [16 commit: refactoring the listing component]()
+## [16 commit: refactoring the listing component](https://github.com/makstyle119/todo-angular/tree/c7eb952a752f24cff8d2c11a2c7bdbfa273908ea)
 
 - we add remove item functionality using event bus
+
+## [17 commit: injecting Dependency]()
+
+- handle eventService through dependency injection.
