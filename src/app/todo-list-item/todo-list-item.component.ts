@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import events from '../../shared/services/EventService';
+import { TodoItem } from '../../shared/models/todoItem';
 
 @Component({
   selector: 'todo-list-item',
@@ -10,14 +11,14 @@ import events from '../../shared/services/EventService';
   styleUrl: './todo-list-item.component.css',
 })
 export class TodoListItemComponent {
-  @Input() name!: string;
-  @Input() fulfilled!: boolean;
-  @Output() fulfilledChange = new EventEmitter<boolean>();
+  @Input() item!: TodoItem;
+  // @Input() fulfilled!: boolean;
+  // @Output() fulfilledChange = new EventEmitter<boolean>();
 
   get cssClasses() {
     // return this.fulfilled ? ['strikeout', 'text-muted'] : [];
     return {
-      'strikeout text-muted': this.fulfilled,
+      'strikeout text-muted': this.item.isCompleted,
     };
   }
 
@@ -26,11 +27,12 @@ export class TodoListItemComponent {
   ngOnInit() {}
 
   toggleItem() {
-    this.fulfilled = !this.fulfilled;
-    this.fulfilledChange.emit(this.fulfilled);
+    this.item.isCompleted = !this.item.isCompleted;
+    // this.fulfilled = !this.fulfilled;
+    // this.fulfilledChange.emit(this.fulfilled);
   }
 
   removeItem() {
-    events.emit('removeItem', this.name);
+    events.emit('removeItem', this.item);
   }
 }

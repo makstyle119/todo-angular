@@ -39,7 +39,9 @@ export class AppComponent {
   constructor() {
     events.listen('removeItem', (item) => {
       // remove item
-      console.log(item);
+      let index = this.items.indexOf(item);
+      this.items.splice(index, 1);
+      // console.log(item);
     });
   }
 

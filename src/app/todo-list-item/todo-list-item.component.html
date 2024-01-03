@@ -4,10 +4,10 @@
       <input
         class="checkbox"
         type="checkbox"
-        [checked]="fulfilled"
+        [checked]="item.isCompleted"
         (click)="toggleItem()"
       />
-      {{ name }}
+      {{ item.name }}
     </label>
   </div>
   <div>

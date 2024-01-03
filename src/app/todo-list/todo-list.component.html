@@ -4,11 +4,9 @@
 
 <ng-template #showItems>
   <ul class="wish-list">
-    <todo-list-item
-      *ngFor="let item of items"
-      [name]="item.name"
-      [(fulfilled)]="item.isCompleted"
-    ></todo-list-item>
+    <todo-list-item *ngFor="let item of items" [item]="item"></todo-list-item>
+    <!-- [name]="item.name"
+    [(fulfilled)]="item.isCompleted" -->
 
     <!-- <li *ngFor="let item of items; index as ii">
       <div class="form-check">

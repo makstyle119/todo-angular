@@ -68,6 +68,10 @@
 
 - we use _**`ngClass`**_ to do conditional rendering and we can provide it's value as _**`string`**_, _**`array`**_, or _**`object`**_
 
-## [15 commit: using observables to create an event bus]()
+## [15 commit: using observables to create an event bus](https://github.com/makstyle119/todo-angular/tree/e35ba71c402b2d39b345def498c99f3c113771fe)
 
 - so we learn how to make event bus ( how it's work ? it's simple you create a f event somewhere and then emit it from anywhere just like redux for events ).
+
+## [16 commit: refactoring the listing component]()
+
+- we add remove item functionality using event bus
