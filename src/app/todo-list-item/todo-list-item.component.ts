@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { TodoItem } from '../../shared/models/todoItem';
+import events from '../../shared/services/EventService';
 
 @Component({
   selector: 'todo-list-item',
@@ -28,5 +28,9 @@ export class TodoListItemComponent {
   toggleItem() {
     this.fulfilled = !this.fulfilled;
     this.fulfilledChange.emit(this.fulfilled);
+  }
+
+  removeItem() {
+    events.emit('removeItem', this.name);
   }
 }

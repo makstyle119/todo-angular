@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
 import { TodoFilterComponent } from './todo-filter/todo-filter.component';
+import events from '../shared/services/EventService';
+// import EventService from '../shared/services/EventService';
 
 // const Filters = [
 //   (item: TodoItem) => item,
@@ -33,6 +35,13 @@ export class AppComponent {
     new TodoItem('Get Coffee', true),
     new TodoItem('wakeUp early 🥴'),
   ];
+
+  constructor() {
+    events.listen('removeItem', (item) => {
+      // remove item
+      console.log(item);
+    });
+  }
 
   // title = 'todo-angular';
   // newTodoItem: string = '';

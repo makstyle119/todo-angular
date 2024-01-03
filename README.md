@@ -64,6 +64,10 @@
 
 - nothing much just do same as last commit and break list component into child component.
 
-## [14 commit: styling component]()
+## [14 commit: styling component](https://github.com/makstyle119/todo-angular/tree/b79fe80bfd3962b02f418f29407db9f7a3df08d0)
 
 - we use _**`ngClass`**_ to do conditional rendering and we can provide it's value as _**`string`**_, _**`array`**_, or _**`object`**_
+
+## [15 commit: using observables to create an event bus]()
+
+- so we learn how to make event bus ( how it's work ? it's simple you create a f event somewhere and then emit it from anywhere just like redux for events ).
