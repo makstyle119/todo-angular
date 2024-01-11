@@ -1,0 +1,14 @@
+[
+  {
+    "name": "To Learn Angular !",
+    "isCompleted": false
+  },
+  {
+    "name": "Get Coffee",
+    "isCompleted": true
+  },
+  {
+    "name": "wakeUp early 🥴",
+    "isCompleted": false
+  }
+]

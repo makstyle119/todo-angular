@@ -76,6 +76,10 @@
 
 - we add remove item functionality using event bus
 
-## [17 commit: injecting Dependency]()
+## [17 commit: injecting Dependency](https://github.com/makstyle119/todo-angular/tree/3422cc7dc125cce893354fcc9fde904f82601460)
 
 - handle eventService through dependency injection.
+
+## [18 commit: issuing HTTP Requests](https://github.com/makstyle119/todo-angular/tree/10d3b4d89a0d8dd528db05d958a746066cc124bc)
+
+- create a service and handle APIs with it (nothing special to mention here).
